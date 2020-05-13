@@ -14,7 +14,7 @@ body {
   /*100% da largura da tela e 100% da altura da tela, auto faz proporcional*/
   /*background-size: 100vw 100vh ;*/
   
-  font-family: Arial;
+  font-family: 'Anonymous Pro', monospace;
   height: 100vh;
   font-size: 12px;
 } 
@@ -37,15 +37,12 @@ body {
   }
 }
 
-
 header{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 
 /*Seleciona os elementos da classe menu do html*/
 .menu {
@@ -84,9 +81,10 @@ a:hover{
 
 .site-subtitle,
 .site-title,
-.title{
+.portfolio h2{
   color: whitesmoke;
   text-align: center;
+  font-family: 'Crimson Text', serif;
 }
 
 .site-title{
@@ -96,36 +94,73 @@ a:hover{
   font-style: italic ;
 }
 
-figcaption{
-  font-size: 18px;
+.portfolio {
+  padding: 2em;
 }
 
+.portfolio h2 {
+  margin-bottom: 1.0em
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 4em;
+  /*align-content: center*/
+  justify-content: center;
+}
+
+@media (min-width: 560px){
+  .portfolio .grid {
+    grid-template-columns: repeat(2,200px);
+  }
+}
+
+@media (min-width: 880px){
+  .portfolio .grid {
+    grid-template-columns: repeat(3,200px);
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+@media (min-width: 1150px){
+  .portfolio .grid {
+    grid-template-columns: repeat(4,200px);
+    justify-content: space-evenly; 
+  }
+}
+
+.portfolio figure{
+  text-align: center
+}
+
+.portfolio .img-portfolio{
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  border-radius: 10%;
+  /*margin: 10px;
+  padding: 5px;*/
+}
+/* 
+.portfolio .grid figcaption{
+  font-size: 18px;
+}*/
+
+
+
+/*
 @media (max-width: 400px) {
   figcaption{
     font-size: 12px;
   }
-}
+}*/
 
-.img-portfolio{
-  height: 180px;
-  width: 180px;
-}
 
-.row {
-  display: flex;
-  justify-content: space-evenly;
-}
 
-.img-portfolio{
-  margin: 10px;
-  padding: 5px;
-}
-
-@media (max-width: 500px) {
+/*
+@media (min-width: 1200px) {
   .img-portfolio {
     height: 90px;
     width: 90px;
-    width: 100%;
-    
   }
-}
+}*/
