@@ -8,45 +8,87 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/d8165bd9be.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav class="menu">
           <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portfólio</a></li>
-            <li><a href="#">Qualificações</a></li>
-            <li><a href="#">Certificações</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#qualificações">Qualificações</a></li>
+            <li><a href="#certificações">Certificações</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <div>
+        <div class='titulo'>
             <h1 class="site-title">Claudemir Woche</h1>
             <h2 class="site-subtitle">Cientista de Dados e Matemático Aplicado</h2>
         </div>
     </header>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2>Portfólio</h2>
       <div class = "grid">
         <figure>
+          <a target="_blank" href="https://github.com/titowoche30/case_cientista-dados_itau">
           <img class="img-portfolio" src="./img/Australia.jpg" alt="Análise Meteorológica Preditiva">
+        </a> 
           <figcaption>Análise Meteorológica Preditiva</figcaption>
+        
         </figure>
         <figure>
+            <a target="_blank" href="https://github.com/titowoche30">
           <img class="img-portfolio" src="./img/credit-card-fraud-reuters.jpg" alt="Análise Preditiva de Fraudes">
+        </a> 
           <figcaption>Análise Preditiva de Fraudes</figcaption>
         </figure>
+          
         <figure>
+          <a target="_blank" href="https://github.com/titowoche30/NLP-basics">
           <img class="img-portfolio" src="./img/NLP.jpeg" alt="Processamento de Linguagem Natural">
+        </a>
           <figcaption>Processamento de Linguagem Natural</figcaption>
         </figure>
+      
         <figure>
+          <a target="_blank" href="https://github.com/titowoche30/Numerical-Methods-II">
           <img class="img-portfolio" src="./img/NM.jpg" alt="Algoritmos Numéricos">
+        </a> 
           <figcaption>Algoritmos Numéricos</figcaption>
         </figure>
+
+        <figure>
+            <a target="_blank" href="https://github.com/titowoche30/Pyomo-Examples">
+            <img class="img-portfolio" src="./img/TSP.png" alt="Otimização Linear">
+          </a> 
+            <figcaption>Otimização Linear</figcaption>
+          </figure>
+      
       </div>
     </section>
-
+    <section class="contato" id="contato">
+      <h2>Contato</h2>
+      <div class="grid icons">
+        <a target="_blank" href="https://github.com/titowoche30">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" href="https://medium.com/@titowoche30">
+          <i class="fab fa-medium"></i>
+        </a>
+        <a target="_blank" href="https://linkedin.com/in/claudemir-woche">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/titowoche/">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:titowoche30@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </section>
 </body>
 </html>

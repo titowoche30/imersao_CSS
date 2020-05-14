@@ -4,17 +4,22 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*Seleciona os elementos da tag body do html*/
 body {
-  /*background: lightseagreen;*/
+  /*background: teal;*/
   background-image: url('../img/fundo.jpg');
+  
   background-size: 100vw 100vh;
-  /* background-size: 300px 250px;*/
+
   
   /*100% da largura da tela e 100% da altura da tela, auto faz proporcional*/
   /*background-size: 100vw 100vh ;*/
   
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Roboto Mono', monospace;
   height: 100vh;
   font-size: 12px;
 } 
@@ -46,10 +51,11 @@ header{
 
 /*Seleciona os elementos da classe menu do html*/
 .menu {
- /* background-color:black;*/
+  background-color: whitesmoke;
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu ul{
@@ -60,11 +66,19 @@ header{
 .menu a{
   display: block;
   padding: 10px 20px;
+  transition: background-color .5s, color .5s;
+
+}
+
+.menu a:active,
+.menu a:hover{
+  background-color: teal;
+  color: whitesmoke;
 }
 
 /*Seleciona os elementos da tag a do html*/
 a {
-  color: red;
+  color: teal;
   text-decoration: none;
 }
 
@@ -74,6 +88,23 @@ a:hover{
   text-decoration: underline;
 }
 
+.titulo {
+  animation: ease-in .5s animacaoTitulo forwards;
+  /*transform: scale(0.2) translateY(50vh);
+  opacity: 0;*/
+}
+
+@keyframes animacaoTitulo{
+  0%{
+    transform: scale(.2) translateY(50vh);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
 /*Todas as li dentro da classe menu(CSS lê da direita pra esquerda) */
 .menu li{
   list-style: none;
@@ -81,25 +112,31 @@ a:hover{
 
 .site-subtitle,
 .site-title,
-.portfolio h2{
-  color: whitesmoke;
+.portfolio h2,
+.contato h2{
+  color:whitesmoke;
   text-align: center;
   font-family: 'Crimson Text', serif;
 }
 
+
 .site-title{
-  font-size: 3em;
+  font-size: 4em;
 }
 .site-subtitle{
   font-style: italic ;
 }
 
+.contato,
 .portfolio {
   padding: 2em;
+  min-height: 100vh;
 }
 
+.contato h2,
 .portfolio h2 {
-  margin-bottom: 1.0em
+  margin-bottom: 1.5em;
+  font-size: 3em;
 }
 
 .portfolio .grid {
@@ -109,58 +146,64 @@ a:hover{
   justify-content: center;
 }
 
-@media (min-width: 560px){
+
+
+@media (min-width: 750px){
   .portfolio .grid {
-    grid-template-columns: repeat(2,200px);
+    grid-template-columns: repeat(3,200px);
+    height: calc(100vh - 60em - 48px);
   }
 }
 
 @media (min-width: 880px){
   .portfolio .grid {
     grid-template-columns: repeat(3,200px);
-    height: calc(100vh - 8em - 48px);
+    height: calc(100vh - 60em - 48px);
   }
 }
 
 @media (min-width: 1150px){
   .portfolio .grid {
     grid-template-columns: repeat(4,200px);
+    height: calc(100vh - 12em - 48px);
     justify-content: space-evenly; 
   }
 }
 
 .portfolio figure{
-  text-align: center
+  text-align: center;
 }
 
-.portfolio .img-portfolio{
+.portfolio .grid figcaption{
+  padding: .3em;
+}
+
+.img-portfolio{
+  margin: .6em;
   height: 180px;
   width: 240px;
   object-fit: cover;
   border-radius: 10%;
-  /*margin: 10px;
-  padding: 5px;*/
+  transition: transform 500ms;
+  opacity: 0.8;
 }
-/* 
-.portfolio .grid figcaption{
-  font-size: 18px;
-}*/
 
+.img-portfolio:hover{
+  transform: scale(1.2);
+  opacity: 1.0;
+}
+.contato .icons{
+  text-align: center;
+}
 
+.contato a{
+  color: whitesmoke;
+  font-size: 5em;
+  transition: text-shadow .5s;
+}
 
-/*
-@media (max-width: 400px) {
-  figcaption{
-    font-size: 12px;
-  }
-}*/
-
-
-
-/*
-@media (min-width: 1200px) {
-  .img-portfolio {
-    height: 90px;
-    width: 90px;
-  }
-}*/
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+}
