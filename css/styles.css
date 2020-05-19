@@ -440,7 +440,9 @@ a:hover{
 .img-portfolio:hover{
   transform: scale(1.2);
   opacity: 1.0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 .contato a{
