@@ -80,13 +80,27 @@ nav a{
 }
 
 
+@media (min-width: 100px) {
+  body{
+    font-size: 8px;
+  }
+}
+
+
+@media (min-width: 250px) {
+  body{
+    font-size: 12px;
+  }
+}
+
+
 @media (min-width: 400px) {
   body{
     font-size: 14px;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   body{
     font-size: 18px;
   }
@@ -315,17 +329,53 @@ a:hover{
 
 .portfolio .grid {
   display: grid;
+  position: relative;
   gap: 4em;
+  /*overflow: scroll;*/
+
   /*align-content: center*/
   justify-content: center;
+}
+/*
+@media (min-width: 150px){
+  .portfolio .grid {
+    grid-template-columns: repeat(1,200px);
+    height: calc(100vh - 30em - 48px);
+  }
+}
+
+*/
+
+@media (min-width: 300px){
+  .portfolio .grid {
+    grid-template-columns: repeat(1,200px);
+    height: calc(100vh - 12em - 48px);
+  }
+}
+
+
+@media (min-width: 400px){
+  .portfolio .grid {
+    grid-template-columns: repeat(1,200px);
+    height: calc(100vh - 12em - 48px);
+  }
+  
+  
+}
+
+@media screen and ( max-width:750px ) {
+  img.img-portfolio{
+    height: 120px;
+    width: 120px;
+    }
 }
 
 
 
-@media (min-width: 750px){
+@media (min-width: 400px){
   .portfolio .grid {
     grid-template-columns: repeat(2,200px);
-    height: calc(100vh - 30em - 48px);
+    height: calc(100vh - 12em - 48px);
   }
 }
 
@@ -333,23 +383,25 @@ a:hover{
   .portfolio .grid {
    /* grid-template-columns: minmax(0, 200px) 200 px;*/
     grid-template-columns: repeat(2,200px);
-    height: calc(100vh - 30em - 48px);
+    height: calc(100vh - 12em - 48px);
   }
 }
 
 @media (min-width: 1150px){
   .portfolio .grid {
-   
+    padding-right: 80px;
     grid-template-columns: repeat(3,200px);
-    height: calc(100vh - 12em - 48px);
+    height: calc(100vh - 5em - 48px);
     justify-content: space-evenly; 
   }
 }
 
+
 @media (min-width: 1450px){
   .portfolio .grid {
+    padding-right: 80px;
     grid-template-columns: repeat(4,200px);
-    height: calc(100vh - 12em - 48px);
+    height: calc(100vh - 8em - 48px);
     justify-content: space-evenly; 
   }
 }
@@ -388,11 +440,12 @@ a:hover{
 .img-portfolio:hover{
   transform: scale(1.2);
   opacity: 1.0;
+  box-shadow: none;
 }
 
 .contato a{
   font-size: 5em;
-  transition: text-shadow .5s;
+  /*transition: text-shadow .5s;*/
 }
 
 .contato a:active,
@@ -412,3 +465,4 @@ a:hover{
 .certificações ul{
   list-style-type: square;
 }
+
