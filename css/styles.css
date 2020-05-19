@@ -426,6 +426,12 @@ a:hover{
  
 }
 
+.img-portfolio:hover{
+  box-shadow: none;
+  transform: scale(1.2);
+  opacity: 1.0;
+}
+
 .img-portfolio{
   margin: .6em;
   height: 180px;
@@ -437,13 +443,7 @@ a:hover{
   box-shadow: 10px 10px 10px black;
 }
 
-.img-portfolio:hover{
-  transform: scale(1.2);
-  opacity: 1.0;
-  -webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
+
 
 .contato a{
   font-size: 5em;
