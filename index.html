@@ -13,24 +13,31 @@
     
 </head>
 <body>
-    <header id="home">
-        <nav class="menu">
-          <ul class = "container">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#certificações">Certificações</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
+
+    <input type="checkbox" id="check">
+    <label id="icone" for="check"><img src="./img/icone.png"></label>
+
+    <div class="barra">
+      <nav>
+        <a href="#home"><div class="link">Home</div></a>
+        <a href="#sobre"><div class="link">Sobre</div></a>
+        <a href="#portfolio"><div class="link">Portfólio</div></a>
+        <a href="#certificações"><div class="link">Certificações</div></a>
+        <a href="#contato"><div class="link">Contato</div></a>
+      </nav>
+    </div>
+
+    <header id="home">  
         <div class='titulo'>
             <h1 class="site-title">Claudemir Woche</h1>
             <h2 class="site-subtitle">Cientista de Dados e Matemático Aplicado</h2>
         </div>
     </header>
+  
 
     <section class ="sobre container" id="sobre">
         <h2>Sobre</h2>
+        <div class ="vertical-center">
 
         <figure class="avatar">
           <img class="img-sobre" src="./img/tito.jpeg" alt="Claudemir Woche">
@@ -59,83 +66,88 @@
           Esse site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura </a>
           </p>
           --->
-        
+        </div>
         
 
     </section>
     <section class="portfolio container" id="portfolio">
-      <h2>Portfólio</h2>
-      <div class = "grid">
-        <figure>
-          <a target="_blank" href="https://github.com/titowoche30/case_cientista-dados_itau">
-          <img class="img-portfolio" src="./img/Australia.jpg" alt="Análise Meteorológica Preditiva">
-        </a> 
-          <figcaption>Análise Meteorológica Preditiva</figcaption>
-        
-        </figure>
-        <figure>
-            <a target="_blank" href="https://github.com/titowoche30/credit_card_fraud_detection">
-          <img class="img-portfolio" src="./img/credit-card-fraud-reuters.jpg" alt="Análise Preditiva de Fraudes">
-        </a> 
-          <figcaption>Análise Preditiva de Fraudes</figcaption>
-        </figure>
-          
-        <figure>
-          <a target="_blank" href="https://github.com/titowoche30/NLP-basics">
-          <img class="img-portfolio" src="./img/NLP.jpeg" alt="Processamento de Linguagem Natural">
-        </a>
-          <figcaption>Processamento de Linguagem Natural</figcaption>
-        </figure>
-      
-        <figure>
-          <a target="_blank" href="https://github.com/titowoche30/Numerical-Methods-II">
-          <img class="img-portfolio" src="./img/NM.jpg" alt="Algoritmos Numéricos">
-        </a> 
-          <figcaption>Algoritmos Numéricos</figcaption>
-        </figure>
-
-        <figure>
-            <a target="_blank" href="https://github.com/titowoche30/Pyomo-Examples">
-            <img class="img-portfolio" src="./img/TSP.png" alt="Otimização Linear">
+      <div class="vertical-center">
+        <h2>Portfólio</h2>
+        <div class = "grid">
+          <figure>
+            <a target="_blank" href="https://github.com/titowoche30/case_cientista-dados_itau">
+            <img class="img-portfolio" src="./img/Australia.jpg" alt="Análise Meteorológica Preditiva">
           </a> 
-            <figcaption>Otimização Linear</figcaption>
+            <figcaption>Análise Meteorológica Preditiva</figcaption>
+          
           </figure>
-      
-      </div>
-    </section>
-    <section class="contato container" id="contato">
-      <h2>Contato</h2>
-      <div class="icons_contato_out">
-        <a target="_blank" href="https://github.com/titowoche30">
-          <i class="fab fa-github icons_contato"></i>
-        </a>
-        <a target="_blank" href="https://medium.com/@titowoche30">
-          <i class="fab fa-medium icons_contato"></i>
-        </a>
-        <a target="_blank" href="https://linkedin.com/in/claudemir-woche">
-          <i class="fab fa-linkedin icons_contato"></i>
-        </a>
-        <a target="_blank" href="https://www.instagram.com/titowoche/">
-          <i class="fab fa-instagram icons_contato"></i>
-        </a>
-        <a target="_blank" href="mailto:titowoche30@gmail.com">
-          <i class="fas fa-envelope icons_contato"></i>
-        </a>
+          <figure>
+              <a target="_blank" href="https://github.com/titowoche30/credit_card_fraud_detection">
+            <img class="img-portfolio" src="./img/credit-card-fraud-reuters.jpg" alt="Análise Preditiva de Fraudes">
+          </a> 
+            <figcaption>Análise Preditiva de Fraudes</figcaption>
+          </figure>
+            
+          <figure>
+            <a target="_blank" href="https://github.com/titowoche30/NLP-basics">
+            <img class="img-portfolio" src="./img/NLP.jpeg" alt="Processamento de Linguagem Natural">
+          </a>
+            <figcaption>Processamento de Linguagem Natural</figcaption>
+          </figure>
+        
+          <figure>
+            <a target="_blank" href="https://github.com/titowoche30/Numerical-Methods-II">
+            <img class="img-portfolio" src="./img/NM.jpg" alt="Algoritmos Numéricos">
+          </a> 
+            <figcaption>Algoritmos Numéricos</figcaption>
+          </figure>
+
+          <figure>
+              <a target="_blank" href="https://github.com/titowoche30/Pyomo-Examples">
+              <img class="img-portfolio" src="./img/TSP.png" alt="Otimização Linear">
+            </a> 
+              <figcaption>Otimização Linear</figcaption>
+            </figure>
+          </div>
         </div>
       
     </section>
+
     <section class = "certificações container" id="certificações">
-      <h2>Certificações</h2>
-      <ul>
-          <li><a target="_blank"  href="https://drive.google.com/file/d/1b0v009SwMvsfWJgnPiU8LW9O44M9cA0o/view">Python para Data Science e Machine Learning</a></li>
-          <li><a target="_blank"  href="https://drive.google.com/file/d/1mn7jiGU6P6thEsi7fg803LCX4eEBuAN3/view">Formação Engenheiro de Dados</a></li>
-          <li><a target="_blank"  href="https://drive.google.com/file/d/1tKqCJQ5Dybv7bnUElaA1CqdKL-ncgqui/view">Machine Learning, uma introdução prática com Python</a></li>
-          <li><a href="https://drive.google.com/file/d/1B-ZD1B_NTUq0twBpw3dTV6W_yaejKcO0/view">Curso completo de Microsoft Excel</a></li>
-          <li>SQL para Big Data: Hive e Impala <b>(Em curso)</b></li>
-        </ul>
-
+      <div class="vertical-center">
+        <h2>Certificações</h2>
+          <ul>
+              <li><a target="_blank"  href="https://drive.google.com/file/d/1b0v009SwMvsfWJgnPiU8LW9O44M9cA0o/view">Python para Data Science e Machine Learning</a></li>
+              <li><a target="_blank"  href="https://drive.google.com/file/d/1mn7jiGU6P6thEsi7fg803LCX4eEBuAN3/view">Formação Engenheiro de Dados</a></li>
+              <li><a target="_blank"  href="https://drive.google.com/file/d/1tKqCJQ5Dybv7bnUElaA1CqdKL-ncgqui/view">Machine Learning, uma introdução prática com Python</a></li>
+              <li><a href="https://drive.google.com/file/d/1B-ZD1B_NTUq0twBpw3dTV6W_yaejKcO0/view">Curso completo de Microsoft Excel</a></li>
+              <li>SQL para Big Data: Hive e Impala <b>(Em curso)</b></li>
+          </ul>
+        </div>
+      </section>
       
-
+    <section class="contato container" id="contato">
+      <div class="vertical-center">
+      <h2>Contato</h2>
+        <div class="icons_contato_out">
+          <a target="_blank" href="https://github.com/titowoche30">
+            <i class="fab fa-github icons_contato"></i>
+          </a>
+          <a target="_blank" href="https://medium.com/@titowoche30">
+            <i class="fab fa-medium icons_contato"></i>
+          </a>
+          <a target="_blank" href="https://linkedin.com/in/claudemir-woche">
+            <i class="fab fa-linkedin icons_contato"></i>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/titowoche/">
+            <i class="fab fa-instagram icons_contato"></i>
+          </a>
+          <a target="_blank" href="mailto:titowoche30@gmail.com">
+            <i class="fas fa-envelope icons_contato"></i>
+          </a>
+        </div>
+      </div>
     </section>
+    
 </body>
 </html>

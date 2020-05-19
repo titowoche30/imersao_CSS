@@ -24,6 +24,62 @@ body {
   font-size: 12px;
 } 
 
+#check{
+  display: none;
+}
+
+#icone{
+  cursor: pointer;
+  padding: 15px;
+  position: fixed;
+  z-index: 1;
+}
+
+.barra{
+  background-color: rgba(16,16,16,.5);
+  height: 400vh;
+  width: 200px;
+  position: fixed;
+  transition: all .2s linear;
+  left: -300px;
+}
+
+nav{
+  width: 100%;
+  position: absolute;
+  top: 60px;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+.link{
+  background-color:  rgba(16,16,16,.7);
+  padding: 20px;
+  font-family: 'Arial';
+  font-size: 12pt;
+  transition: all .2s linear;
+  color: #f4f4f9;
+  border-bottom: 2px solid #222;
+  opacity: 0;
+  margin-top: 200px;
+}
+
+.link:hover{
+  background-color: #050542;
+}
+
+#check:checked ~ .barra{
+  transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav a .link{
+  opacity: 1;
+  margin-top: 0;
+}
+
+
 @media (min-width: 400px) {
   body{
     font-size: 14px;
@@ -50,7 +106,7 @@ header{
   align-items: center;
 }
 
-/*Seleciona os elementos da classe menu do html*/
+/*
 .menu {
   background-color: rgb(50, 56, 48);
   position: fixed;
@@ -76,6 +132,11 @@ header{
   background-color: teal;
   color: whitesmoke;
 }
+
+.menu li{
+  list-style: none;
+}
+*/
 
 /*Seleciona os elementos da tag a do html*/
 a {
@@ -107,9 +168,7 @@ a:hover{
 }
 
 /*Todas as li dentro da classe menu(CSS lê da direita pra esquerda) */
-.menu li{
-  list-style: none;
-}
+
 
 .site-subtitle,
 .site-title,
@@ -136,22 +195,95 @@ a:hover{
 }*/
 
 .sobre,
-.portfolio,
-.certificações {
+.home,
+.contato,
+.certificações,
+.portfolio{
   padding: 2em;
   min-height: 100vh;
 }
 
-.contato{
-  padding: 2em;
-  min-height: 60vh;
-}
+/*
+@media (min-width: 600px){
+  .certificações{
+    min-height: 170vh;
+  }
+  .contato{
+    min-height: 70vh;
+  }
+}*/
 
-@media (min-width: 1200px){
+/*
+@media (min-width: 300px){
   .container {
     margin-left: auto;
     margin-right: auto;
+    max-width: 300px;
+  }
+}
+*/
+.container{
+  height: 200px;
+  position: relative;
+  /*border: 3px solid green;*/
+}
+
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+
+}
+
+
+
+@media (min-width: 500px){
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 700px){
+  .container {
+    margin-left: 25vw;
+    margin-right: auto;
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 900px){
+  .container {
+    margin-left: 19vw;
+    margin-right: auto;
+    max-width: 900px;
+  }
+  .certificações,
+  .contato {
+    margin-left: 25vw;
+    margin-right: auto;
+    max-width: 900px;
+  }
+}
+
+
+@media (min-width: 1200px){
+  .container {
+    margin-left: 15vw;
+    margin-right: auto;
     max-width: 1200px;
+  }
+
+  .certificações,
+  .contato {
+    margin-left: 25vw;
+    margin-right: auto;
+    max-width: 900px;
   }
 }
 
@@ -192,19 +324,29 @@ a:hover{
 
 @media (min-width: 750px){
   .portfolio .grid {
-    grid-template-columns: repeat(3,200px);
-    height: calc(100vh - 60em - 48px);
+    grid-template-columns: repeat(2,200px);
+    height: calc(100vh - 30em - 48px);
   }
 }
 
-@media (min-width: 880px){
+@media (min-width: 1070px){
   .portfolio .grid {
-    grid-template-columns: repeat(3,200px);
-    height: calc(100vh - 60em - 48px);
+   /* grid-template-columns: minmax(0, 200px) 200 px;*/
+    grid-template-columns: repeat(2,200px);
+    height: calc(100vh - 30em - 48px);
   }
 }
 
 @media (min-width: 1150px){
+  .portfolio .grid {
+   
+    grid-template-columns: repeat(3,200px);
+    height: calc(100vh - 12em - 48px);
+    justify-content: space-evenly; 
+  }
+}
+
+@media (min-width: 1450px){
   .portfolio .grid {
     grid-template-columns: repeat(4,200px);
     height: calc(100vh - 12em - 48px);
@@ -214,6 +356,7 @@ a:hover{
 
 .portfolio figure{
   text-align: center;
+  min-width: 0;
 }
 
 .portfolio .grid figcaption{
