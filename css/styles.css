@@ -417,8 +417,8 @@ a:hover{
 
 .img-sobre{
   margin: .6em;
-  height: 240px;
-  width: 240px;
+  height: 250px;
+  width: 185px;
   border-radius: 50%;
   box-shadow: 10px 10px 30px black;
  /* clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);*/
