@@ -10,10 +10,10 @@ html {
 
 /*Seleciona os elementos da tag body do html*/
 body {
-  /*background: teal;*/
-  background-image: url('../img/fundo.jpg');
+  background: whitesmoke;
+  /*background-image: url('../img/fundo.jpg');
   
-  background-size: 100vw 100vh;
+  background-size: 100vw 100vh;*/
 
   
   /*100% da largura da tela e 100% da altura da tela, auto faz proporcional*/
@@ -42,6 +42,7 @@ body {
   }
 }
 
+
 header{
   height: 100vh;
   display: flex;
@@ -51,7 +52,7 @@ header{
 
 /*Seleciona os elementos da classe menu do html*/
 .menu {
-  background-color: whitesmoke;
+  background-color: rgb(50, 56, 48);
   position: fixed;
   width: 100vw;
   top: 0;
@@ -89,7 +90,7 @@ a:hover{
 }
 
 .titulo {
-  animation: ease-in .5s animacaoTitulo forwards;
+  animation: ease-in 1s animacaoTitulo forwards;
   /*transform: scale(0.2) translateY(50vh);
   opacity: 0;*/
 }
@@ -112,9 +113,11 @@ a:hover{
 
 .site-subtitle,
 .site-title,
+.sobre h2,
 .portfolio h2,
-.contato h2{
-  color:whitesmoke;
+.contato h2,
+.certificações h2{
+  color: black;
   text-align: center;
   font-family: 'Crimson Text', serif;
 }
@@ -126,18 +129,57 @@ a:hover{
 .site-subtitle{
   font-style: italic ;
 }
+/*
+.sobre{
+  padding: 2em;
+  min-height: 60vh;
+}*/
 
-.contato,
-.portfolio {
+.sobre,
+.portfolio,
+.certificações {
   padding: 2em;
   min-height: 100vh;
 }
 
+.contato{
+  padding: 2em;
+  min-height: 60vh;
+}
+
+@media (min-width: 1200px){
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
 .contato h2,
-.portfolio h2 {
-  margin-bottom: 1.5em;
+.portfolio h2,
+.certificações h2 {
+  margin-bottom:1em;
   font-size: 3em;
 }
+
+.sobre p {
+  color: black;
+  margin-bottom: .2em;
+  text-indent: 1.4em;
+}
+
+.sobre a{
+  color: blue;
+  text-decoration: underline;
+}
+
+.sobre .avatar{
+  float:left;
+  margin-right: 2em;
+}
+
+
 
 .portfolio .grid {
   display: grid;
@@ -178,6 +220,17 @@ a:hover{
   padding: .3em;
 }
 
+.img-sobre{
+  margin: .6em;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px black;
+ /* clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);*/
+
+ 
+}
+
 .img-portfolio{
   margin: .6em;
   height: 180px;
@@ -186,18 +239,15 @@ a:hover{
   border-radius: 10%;
   transition: transform 500ms;
   opacity: 0.8;
+  box-shadow: 10px 10px 10px black;
 }
 
 .img-portfolio:hover{
   transform: scale(1.2);
   opacity: 1.0;
 }
-.contato .icons{
-  text-align: center;
-}
 
 .contato a{
-  color: whitesmoke;
   font-size: 5em;
   transition: text-shadow .5s;
 }
@@ -205,5 +255,17 @@ a:hover{
 .contato a:active,
 .contato a:hover{
   text-decoration: none;
-  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+  text-shadow: 0px 0px 10px rgb(0,0,0,.3);
+}
+
+.icons_contato_out {
+  text-align: center;
+}
+
+.icons_contato {
+  color: teal;
+}
+
+.certificações ul{
+  list-style-type: square;
 }

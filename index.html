@@ -15,11 +15,10 @@
 <body>
     <header id="home">
         <nav class="menu">
-          <ul>
+          <ul class = "container">
             <li><a href="#home">Home</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#qualificações">Qualificações</a></li>
             <li><a href="#certificações">Certificações</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
@@ -30,7 +29,41 @@
         </div>
     </header>
 
-    <section class="portfolio" id="portfolio">
+    <section class ="sobre container" id="sobre">
+        <h2>Sobre</h2>
+
+        <figure class="avatar">
+          <img class="img-sobre" src="./img/tito.jpeg" alt="Claudemir Woche">
+        </figure>
+
+        <p>
+          Bacharelando em Matemática Industrial com ênfase em Pesquisa Operacional e Ciência de Dados
+          pela UFC.   
+        </p>
+        
+        <p>
+          Tenho conhecimento nas principais bibliotecas de tratamento de dados e machine 
+          learning e uma formação acadêmica sólida em Matemática, Estatística e Computação
+          (principalmente Python).
+        </p>
+
+        <p>
+          Sou apaixonado por programação e tecnologia.
+        </p>
+        <p>
+          <a href="./curriculo/Curriculo_Claudemir-Woche.pdf" target="_blank">Currículo Completo </a>
+        </p>
+
+        <!-----
+          <p>
+          Esse site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura </a>
+          </p>
+          --->
+        
+        
+
+    </section>
+    <section class="portfolio container" id="portfolio">
       <h2>Portfólio</h2>
       <div class = "grid">
         <figure>
@@ -41,7 +74,7 @@
         
         </figure>
         <figure>
-            <a target="_blank" href="https://github.com/titowoche30">
+            <a target="_blank" href="https://github.com/titowoche30/credit_card_fraud_detection">
           <img class="img-portfolio" src="./img/credit-card-fraud-reuters.jpg" alt="Análise Preditiva de Fraudes">
         </a> 
           <figcaption>Análise Preditiva de Fraudes</figcaption>
@@ -70,25 +103,39 @@
       
       </div>
     </section>
-    <section class="contato" id="contato">
+    <section class="contato container" id="contato">
       <h2>Contato</h2>
-      <div class="grid icons">
+      <div class="icons_contato_out">
         <a target="_blank" href="https://github.com/titowoche30">
-          <i class="fab fa-github"></i>
+          <i class="fab fa-github icons_contato"></i>
         </a>
         <a target="_blank" href="https://medium.com/@titowoche30">
-          <i class="fab fa-medium"></i>
+          <i class="fab fa-medium icons_contato"></i>
         </a>
         <a target="_blank" href="https://linkedin.com/in/claudemir-woche">
-          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-linkedin icons_contato"></i>
         </a>
         <a target="_blank" href="https://www.instagram.com/titowoche/">
-          <i class="fab fa-instagram"></i>
+          <i class="fab fa-instagram icons_contato"></i>
         </a>
-        <a href="mailto:titowoche30@gmail.com">
-          <i class="fas fa-envelope"></i>
+        <a target="_blank" href="mailto:titowoche30@gmail.com">
+          <i class="fas fa-envelope icons_contato"></i>
         </a>
-      </div>
+        </div>
+      
+    </section>
+    <section class = "certificações container" id="certificações">
+      <h2>Certificações</h2>
+      <ul>
+          <li><a target="_blank"  href="https://drive.google.com/file/d/1b0v009SwMvsfWJgnPiU8LW9O44M9cA0o/view">Python para Data Science e Machine Learning</a></li>
+          <li><a target="_blank"  href="https://drive.google.com/file/d/1mn7jiGU6P6thEsi7fg803LCX4eEBuAN3/view">Formação Engenheiro de Dados</a></li>
+          <li><a target="_blank"  href="https://drive.google.com/file/d/1tKqCJQ5Dybv7bnUElaA1CqdKL-ncgqui/view">Machine Learning, uma introdução prática com Python</a></li>
+          <li><a href="https://drive.google.com/file/d/1B-ZD1B_NTUq0twBpw3dTV6W_yaejKcO0/view">Curso completo de Microsoft Excel</a></li>
+          <li>SQL para Big Data: Hive e Impala <b>(Em curso)</b></li>
+        </ul>
+
+      
+
     </section>
 </body>
 </html>
