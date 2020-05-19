@@ -1,4 +1,4 @@
 # imersao_CSS
-Site seguindo o curso Imersão CSS da Alura
+Meu site pessoal feito através do curso [Imersão CSS da Alura](https://www.alura.com.br/imersao-css)
 
 https://titowoche30.github.io/
