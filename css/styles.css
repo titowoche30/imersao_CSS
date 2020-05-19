@@ -217,6 +217,26 @@ a:hover{
   min-height: 100vh;
 }
 
+@media (max-height: 540px){
+  .sobre,
+  .home,
+  .contato,
+  .certificações,
+  .portfolio{
+    min-height: 165vh;
+}
+}
+
+@media (max-height: 380px){
+  .sobre,
+  .home,
+  .contato,
+  .certificações,
+  .portfolio{
+    min-height: 200vh;
+}
+}
+
 /*
 @media (min-width: 600px){
   .certificações{
@@ -253,6 +273,29 @@ a:hover{
 
 }
 
+@media (min-width: 250px){
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 400px){
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 400px){
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
+}
 
 
 @media (min-width: 500px){
@@ -379,8 +422,8 @@ a:hover{
 
 @media screen and ( max-height:660px ) {
   img.img-portfolio{
-    height: 3em;
-    width: 4em;
+    height: 5em;
+    width: 6em;
     }
 }
 
